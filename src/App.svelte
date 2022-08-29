@@ -5,8 +5,8 @@ import { each } from "svelte/internal";
 	import { targetPlayer, players } from "./lib/processor";
 	import { socketMessageStore } from "./lib/socket";
   
-	$: console.log($socketMessageStore);
-	$: console.log($players);
+	//$: console.log($socketMessageStore);
+	//$: console.log($players);
   </script>
   
   <main>

@@ -1,7 +1,7 @@
 <script>
 	export let percent = 80;
 
-	$: console.log(percent);
+	//$: console.log(percent);
 </script>
 
 <div class="boost bg">
@@ -12,11 +12,12 @@
 	.boost {
 	  position: relative;
 	  height: 50px;
-
+	  border-radius: 25px;
 	  background-color: pink;
 	}
 	.bg {
 	  width: 300px;
 	  background-color: #000;
+	  border-radius: 25px;
 	}
   </style>

@@ -12,12 +12,11 @@
 	.boost {
 	  position: relative;
 	  height: 50px;
-	  border-radius: 25px;
+
 	  background-color: pink;
 	}
 	.bg {
 	  width: 300px;
-	  border-radius: 25px;
 	  background-color: #000;
 	}
   </style>

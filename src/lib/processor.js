@@ -23,9 +23,17 @@ export const targetPlayer = derived(updateState, ($update, set) => {
 });
 
 export const players = derived(updateState, ($update, set) => {
-	//if (!$update) return;
-	const allPlayers = $update.players
-	set(Object.entries(allPlayers))
+	if ($update)
+	{
+		const allPlayers = $update.players
+		//console.log(Object.entries(allPlayers));
+		set(Object.entries(allPlayers))
+	}
+	else
+	{
+		set([]);
+	}
+	
   });
 
 

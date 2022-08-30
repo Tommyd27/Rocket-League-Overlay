@@ -14,7 +14,13 @@ import { each } from "svelte/internal";
 	<Boost percent="{$targetPlayer.boost}" />
 	{/if}-->
 	{#each $players as player}
-	<Boost percent = "{player[1].boost}"/>
+	<Boost percent = "{player[1].boost}" 
+		   name = "{player[1].name}" 
+		   score = "{player[1].score}"
+		   goals = "{player[1].goals}"
+		   saves = "{player[1].saves}"
+		   />
+	<span></span>
 	{/each}
 	
   </main>

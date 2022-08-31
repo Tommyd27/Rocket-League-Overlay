@@ -40,13 +40,11 @@
 	  grid-column: 1;
 	  grid-row: 1;
 	  height: 50px;
-	  border-radius: 0 25px 25px 5px;
 	  background-color: pink;
 	}
 	.bg {
 	  width: 300px;
 	  background-color: #000;
-	  border-radius: 0 25px 25px 5px;
 	  display : grid;
 	  margin-bottom: 10px;
 	}

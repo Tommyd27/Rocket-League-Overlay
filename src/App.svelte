@@ -2,9 +2,9 @@
 import { each } from "svelte/internal";
 
 	import Boost from "./lib/Boost.svelte";
-	import { targetPlayer, players } from "./lib/processor";
+	import { game, players } from "./lib/processor";
 	import { socketMessageStore } from "./lib/socket";
-  
+	import Timer from "./lib/Timer.svelte";
 	//$: console.log($socketMessageStore);
 	//$: console.log($players);
   </script>
@@ -20,7 +20,8 @@ import { each } from "svelte/internal";
 		   goals = "{player[1].goals}"
 		   saves = "{player[1].saves}"
 		   />
-	<span></span>
 	{/each}
-	
-  </main>
+
+	<Timer time = "{$game.time_seconds}" blueGoals = "{$game.teams[0].score}" orangeGoals = "{$game.teams[1].score}"/>
+
+	</main>

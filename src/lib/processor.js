@@ -11,16 +11,12 @@ export const updateState = derived(socketMessageStore, ($msg, set) => {
 
 
 
-export const targetPlayer = derived(updateState, ($update, set) => {
-  if (!$update) return;
-
-  if ($update.game.hasTarget) {
-    const player = $update.players[$update.game.target];
-    set(player);
-  } else {
-    set({});
+export const game = derived(updateState, ($update, set) => {
+  	if (!$update) return;
+	const game = $update.game;
+    set(game);
   }
-});
+);
 
 export const players = derived(updateState, ($update, set) => {
 	if ($update)
